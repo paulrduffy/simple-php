@@ -1,50 +1,4 @@
 <!DOCTYPE html>
-
-<?php
-// Example use of getenv()
-$ip = getenv('REMOTE_ADDR');
-
-
-echo "IP is" . $ip;
-
-$servername = getenv('dbhost');
-
-echo "dbhost is " . $servername;
-
-$username = getenv("username");
-
-echo "username is " . $username;
-
-$password = getenv("dbpassword");
-
-echo "password is " . $password;
-
-$dbname = getenv("dbname");
-
-echo "dbname is " . $dbname;
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
-$sql = "SELECT id, firstname, lastname FROM results";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. " - raceno: " . $row["raceno"] . "<br>";
-    }
-} else {
-    echo "0 results";
-}
-$conn->close();
-
-?>
-
 <html lang="en">
 
     <head>
@@ -57,10 +11,11 @@ $conn->close();
         <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     </head>
 
-    <body bgcolor="#0000FF">
+    <body bgcolor="#00FF00">
         <div class="container">
             <div class="hero-unit">
-                <h1><font face="verdana" color="yellow">Very Simple PHP Test Application...</font></h1>
+                <h1><font face="verdana" color="yellow">Simple PHP Test Application EXTRA!</font></h1>
+                <br>
                 <br>
                 <p><font face="verdana" color="yellow" size="5">This simple PHP test application was deployed in a Runnable Sandbox!</font></p>
                 <br>
@@ -72,5 +27,3 @@ $conn->close();
     </body>
 
 </html>
-
-
