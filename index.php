@@ -11,10 +11,10 @@
         <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     </head>
 
-    <body bgcolor="#00FF00">
+    <body bgcolor="#000099">
         <div class="container">
             <div class="hero-unit">
-                <h1><font face="verdana" color="yellow">Simple PHP Test Application EXTRA!</font></h1>
+                <h1><font face="verdana" color="yellow">Simple PHP Test Application!</font></h1>
                 <br>
                 <br>
                 <p><font face="verdana" color="yellow" size="5">This simple PHP test application was deployed in a Runnable Sandbox!</font></p>
